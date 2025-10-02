@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vrouqen/front-kubernetes:main
+          image: silksong-frontend:latest
           ports:
             - containerPort: 888
           readinessProbe:
