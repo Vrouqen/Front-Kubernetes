@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hollow Knight: Silksong — Mini Sitio</title>
+  <meta name="description" content="Mini sitio bonito y sencillo para pruebas de CI/CD" />
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Barra de menú -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1>Hollow Knight: Silksong · Mini Sitio</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero con imagen fija -->
+    <section class="hero">
+      <div class="media">
+        <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Hollow Knight Silksong Banner" />
+        <div class="overlay">
+          <h2 class="title">Silksong</h2>
+          <span class="tag">fan page</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Texto fijo -->
+    <section class="content">
+      <h2>Acerca del juego</h2>
+      <p>
+        Hollow Knight: Silksong es la esperada secuela enfocada en la ágil Hornet.
+        Este mini sitio es un front super simple para tus pruebas de CI/CD.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>Hecho con ♥ para pruebas de CI/CD. No oficial ni afiliado a Team Cherry.</small>
+  </footer>
+</body>
+</html>
