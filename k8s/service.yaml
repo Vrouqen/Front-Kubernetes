@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: silksong-frontend
+  namespace: silksong
+  labels:
+    app: silksong-frontend
+spec:
+  selector:
+    app: silksong-frontend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 888
+  type: ClusterIP
