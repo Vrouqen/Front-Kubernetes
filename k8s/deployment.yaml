@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vrouqen/front-kubernetes:REPLACEME   # <-- CI lo cambia
+          image: vrouqen/front-kubernetes:gh-44fd836
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 888
