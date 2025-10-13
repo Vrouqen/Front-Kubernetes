@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: silksong-frontend
-  namespace: silksong
   labels:
     app: silksong-frontend
 spec:
@@ -17,7 +16,8 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vrouqen/front-kubernetes:main
+          image: vrouqen/front-kubernetes:REPLACEME   # <-- CI lo cambia
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 888
           readinessProbe:
@@ -33,9 +33,5 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 20
           resources:
-            requests:
-              cpu: "50m"
-              memory: "64Mi"
-            limits:
-              cpu: "200m"
-              memory: "256Mi"
+            requests: { cpu: "50m", memory: "64Mi" }
+            limits: { cpu: "200m", memory: "256Mi" }
