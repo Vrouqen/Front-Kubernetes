@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vrouqen/front-kubernetes:gh-3499520
+          image: vrouqen/front-kubernetes:gh-1ab49f7
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 888
