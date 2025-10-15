@@ -5,10 +5,11 @@ metadata:
   labels:
     app: silksong-frontend
 spec:
+  type: LoadBalancer
+  # type: ClusterIP
   selector:
     app: silksong-frontend
   ports:
     - name: http
       port: 80
       targetPort: 888
-  type: ClusterIP
